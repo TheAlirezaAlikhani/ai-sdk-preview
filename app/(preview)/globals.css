@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@font-face {
+    font-family: "uncut sans";
+    src: url("./uncut-sans.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Iranian Sans";
+    src: url("../font/IranianSans.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+* {
+    font-family: "Iranian Sans", "uncut sans", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* Persian text optimization */
+body {
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure proper RTL text rendering */
+[dir="rtl"] {
+    font-family: "Iranian Sans", "Tahoma", "Arial", sans-serif;
+}
