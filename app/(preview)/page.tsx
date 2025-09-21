@@ -42,7 +42,7 @@ export default function Home() {
         >
           {messages.length === 0 && (
             <motion.div className="h-[350px] px-4 w-full md:w-[500px] md:px-0 pt-20">
-              <div className=" rounded-lg p-6 flex flex-col gap-4 text-zinc-500 text-sm dark:text-zinc-400 dark:border-zinc-700">
+              <div className="border rounded-lg p-6 flex flex-col gap-4 text-zinc-500 text-sm dark:text-zinc-400 dark:border-zinc-700">
               <div className="flex justify-center mb-4">
                 <Image
                   src="/logo2.png"
