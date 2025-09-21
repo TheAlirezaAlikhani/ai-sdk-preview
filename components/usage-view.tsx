@@ -35,7 +35,7 @@ export const UsageView = ({
         </div>
       </motion.div>
 
-      <div className="flex flex-row-reverse gap-6 justify-between">
+      <div className="flex flex-row gap-6 justify-between">
         <motion.div
           className="mt-auto flex flex-col justify-between h-full py-2"
           initial={{ opacity: 0 }}

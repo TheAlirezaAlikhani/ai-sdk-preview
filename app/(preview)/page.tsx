@@ -34,8 +34,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-row justify-center pb-20 h-dvh bg-white dark:bg-zinc-900">
-      <div className="flex flex-col justify-between gap-4">
+    <div className="flex flex-row justify-center pb-4 md:pb-20 h-dvh bg-white dark:bg-zinc-900">
+      <div className="flex flex-col justify-between md:gap-4">
         <div
           ref={messagesContainerRef}
           className="flex flex-col gap-3 h-full w-dvw items-center overflow-y-scroll"

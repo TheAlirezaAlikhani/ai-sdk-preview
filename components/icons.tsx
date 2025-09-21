@@ -25,7 +25,7 @@ export const UserIcon = () => {
       strokeLinejoin="round"
       viewBox="0 0 16 16"
       width="16"
-      style={{ color: "#e15c74" }}
+      style={{ color: "currentcolor" }}
     >
       <path
         fillRule="evenodd"

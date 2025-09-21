@@ -6,7 +6,7 @@ export const CameraView = () => {
   return (
     <div className="md:max-w-[452px] max-w-[calc(100dvw-80px)] w-full pb-6">
       <div className="flex flex-col gap-2">
-        <div className="flex flex-row-reverse gap-2">
+        <div className="flex flex-row gap-2">
           <motion.div
             className="h-58 w-72 dark:bg-zinc-800 bg-zinc-100 rounded-lg p-2 flex flex-col justify-end"
             initial={{ opacity: 0, y: 10 }}
@@ -23,7 +23,7 @@ export const CameraView = () => {
             </div>
           </motion.div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex  flex-col gap-2">
             <motion.div
               className="h-28 w-52 dark:bg-zinc-800 bg-zinc-100 rounded-lg flex flex-col justify-end p-2"
               initial={{ opacity: 0, y: 10 }}
