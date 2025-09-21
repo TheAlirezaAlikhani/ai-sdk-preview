@@ -37,7 +37,7 @@ const sendMessage = async (message: string) => {
   "use server";
 
   const openrouter = createOpenRouter({
-    apiKey: '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',
+    apiKey: process.env.OPENROUTER_API_KEY,
   });
 
   const messages = getMutableAIState<typeof AI>("messages");
