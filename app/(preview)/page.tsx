@@ -51,7 +51,7 @@ export default function Home() {
                   alt="لوگو"
                   
                 /> */}
-<p> دستیار خانه هوشمند</p>
+<p className="text-red-500"> دستیار خانه هوشمند</p>
 
               </div>
               </div>
@@ -61,7 +61,7 @@ export default function Home() {
           <div ref={messagesEndRef} />
         </div>
 
-        <div className="grid  sm:grid-cols-2 gap-2 w-full px-4 md:px-0 mx-auto md:max-w-[500px] mb-4">
+        <div className="grid  grid-cols-2 gap-2 w-full px-4 md:px-0 mx-auto md:max-w-[500px] mb-4">
           {messages.length === 0 &&
             suggestedActions.map((action, index) => (
               <motion.div
@@ -69,7 +69,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.01 * index }}
                 key={index}
-                className={index > 1 ? "hidden sm:block" : "block"}
+                className={index > 1 ? " sm:block" : "block"}
               >
                 <button
                   onClick={async () => {
@@ -86,10 +86,10 @@ export default function Home() {
                     );
                     setMessages((messages) => [...messages, response]);
                   }}
-                  className="w-full text-right border border-zinc-200 dark:border-zinc-800 text-zinc-800 dark:text-zinc-300 rounded-lg p-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors flex flex-col"
+                  className="w-full text-right border border-zinc-200 dark:border-zinc-800 text-zinc-800 dark:text-zinc-300 rounded-lg p-2 md:text-sm text-[13px] hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors flex flex-col"
                 >
                   <span className="font-medium">{action.title}</span>
-                  <span className="text-zinc-500 dark:text-zinc-400">
+                  <span className="text-[10px] md:text-sm text-zinc-500 dark:text-zinc-400">
                     {action.label}
                   </span>
                 </button>
@@ -115,7 +115,7 @@ export default function Home() {
           
           <input
             ref={inputRef}
-            className="text-[11px] bg-zinc-100 rounded-md px-2 py-1.5 w-full outline-none border border-[#e15c74] dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300 md:max-w-[500px] max-w-[calc(100dvw-32px)]"
+            className="text-sm bg-zinc-100 rounded-md px-2 py-1.5 w-full outline-none border border-[#e15c74] dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300 md:max-w-[500px] max-w-[calc(100dvw-32px)]"
             placeholder="چیزی بپرسید ..."
             value={input}
             onChange={(event) => {
