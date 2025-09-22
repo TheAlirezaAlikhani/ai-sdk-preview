@@ -11,9 +11,9 @@ export const HubView = ({ hub }: { hub: Hub }) => {
     .range([0, 32]);
 
   return (
-    <div className="flex flex-row gap-2 md:max-w-[452px] max-w-[calc(100dvw-80px)] w-full pb-6">
+    <div className="flex flex-row gap-1 md:max-w-[452px]  w-full pb-6">
       <motion.div
-        className="bg-zinc-100 dark:bg-zinc-800 p-2 rounded-md flex flex-row gap-3 items-center"
+        className="bg-zinc-100 dark:bg-zinc-800 p-2 rounded-md flex flex-row gap-1 items-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -22,15 +22,15 @@ export const HubView = ({ hub }: { hub: Hub }) => {
           <GuageIcon />
         </div>
         <div className="text-right">
-          <div className="text-xs">آب و هوا</div>
-          <div className="text-xs text-zinc-500 dark:text-zinc-400">
+          <div className="text-[10px]">دما</div>
+          <div className="text-[10px] text-zinc-500 dark:text-zinc-400">
             {`${hub.climate.low}-${hub.climate.high}°C`}
           </div>
         </div>
       </motion.div>
 
       <motion.div
-        className="bg-zinc-100 dark:bg-zinc-800 p-2 rounded-md flex flex-row gap-3 items-center flex-shrink-0"
+        className="bg-zinc-100 dark:bg-zinc-800 p-1 rounded-md flex flex-row gap-1 items-center flex-shrink-0"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -53,7 +53,7 @@ export const HubView = ({ hub }: { hub: Hub }) => {
         </div>
         <div className="text-right">
           <div className="text-xs">چراغ‌ها</div>
-          <div className="text-xs text-zinc-500 dark:text-zinc-400">
+          <div className="text-[10px] text-zinc-500 dark:text-zinc-400">
             {`${hub.lights.filter((hub) => hub.status).length}/${
               hub.lights.length
             } روشن`}
@@ -62,7 +62,7 @@ export const HubView = ({ hub }: { hub: Hub }) => {
       </motion.div>
 
       <motion.div
-        className="bg-zinc-100 dark:bg-zinc-800 p-2 rounded-md flex flex-row gap-3 items-center"
+        className="bg-zinc-100 dark:bg-zinc-800 p-2 rounded-md flex flex-row gap-1 items-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -72,7 +72,7 @@ export const HubView = ({ hub }: { hub: Hub }) => {
         </div>
         <div className="text-right">
           <div className="text-xs">امنیت</div>
-          <div className="text-xs text-zinc-500 dark:text-zinc-400">
+          <div className="text-[10px] text-zinc-500 dark:text-zinc-400">
             {`${hub.locks.filter((hub) => hub.isLocked).length}/${
               hub.locks.length
             } قفل شده`}
